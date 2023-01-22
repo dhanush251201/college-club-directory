@@ -16,7 +16,7 @@ import Club6lg from './assets/img/clubs/Club6lg.png';
 export const ClubData = [
   {
     id: 1,
-    recruitingFromYear: '1',
+    recruitingYear: '1',
     dept: 'CSE',
     type: 'Club',
     name: 'Club 1',
@@ -30,7 +30,7 @@ export const ClubData = [
   },
   {
     id: 2,
-    recruitingFromYear: '2',
+    recruitingYear: '2',
     dept: 'CSE',
     type: 'Club',
     name: 'Club 2',
@@ -43,7 +43,7 @@ export const ClubData = [
     email: 'club2@mail.com'
   },{
     id: 3,
-    recruitingFromYear: '2',
+    recruitingYear: '2',
     dept: 'IT',
     type: 'Association',
     name: 'Club 3',
@@ -56,7 +56,7 @@ export const ClubData = [
     email: 'club3@mail.com'
   },{
     id: 4,
-    recruitingFromYear: '1',
+    recruitingYear: '1',
     dept: 'IT',
     type: 'Association',
     name: 'Club 4',
@@ -69,7 +69,7 @@ export const ClubData = [
     email: 'club4@mail.com'
   },{
     id: 5,
-    recruitingFromYear: '2',
+    recruitingYear: '2',
     dept: 'EEE',
     type: 'Club',
     name: 'Club 1',
@@ -82,7 +82,7 @@ export const ClubData = [
     email: 'club5@mail.com'
   },{
     id: 6,
-    recruitingFromYear: '1',
+    recruitingYear: '1',
     dept: 'Unaffiliated',
     type: 'Association',
     name: 'Club 6',

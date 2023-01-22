@@ -13,6 +13,7 @@ const ClubContextProvider = ({children}) => {
     const [type,setType] = useState("Type of club");
     const [types,setTypes] = useState([]);
     const [recruitingYear,setRecruitingYear] = useState("1");
+    const [recruitingYears,setRecruitingYears] = useState([]);
     const [dept,setDept] = useState("Department(any)");
     const [description,setDescription] = useState(""); 
     const [loading, setLoading] = useState(false);
@@ -38,6 +39,17 @@ useEffect(()=>{
     console.log(allTypes)
 }, [])
 
+useEffect(()=>{
+    const allRecruitingYears = recruitingYears.map((value) => {
+        return value.recruitingYear;
+    })
+    //remove duplicates
+    const uniqueRecYears=['Any',...new Set(allRecruitingYears)]
+    setRecruitingYear(uniqueRecYears)
+    // console.log(uniqueRecYears)
+
+}, [])
+
     return(
         
         <ClubContext.Provider value={
@@ -51,6 +63,7 @@ useEffect(()=>{
                 setDept,
                 departments,
                 recruitingYear,
+                recruitingYears,
                 setRecruitingYear,
                 description,
                 loading
