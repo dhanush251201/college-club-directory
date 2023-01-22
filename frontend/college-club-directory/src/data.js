@@ -16,6 +16,8 @@ import Club6lg from './assets/img/clubs/Club6lg.png';
 export const ClubData = [
   {
     id: 1,
+    recruitingFromYear: '1',
+    dept: 'CSE',
     type: 'Club',
     name: 'Club 1',
     description:
@@ -28,6 +30,8 @@ export const ClubData = [
   },
   {
     id: 2,
+    recruitingFromYear: '2',
+    dept: 'CSE',
     type: 'Club',
     name: 'Club 2',
     description:
@@ -39,7 +43,9 @@ export const ClubData = [
     email: 'club2@mail.com'
   },{
     id: 3,
-    type: 'Club',
+    recruitingFromYear: '2',
+    dept: 'IT',
+    type: 'Association',
     name: 'Club 3',
     description:
       'Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet, illoat. Repudiandae ratione impedit delectus consectetur. Aspernaturvero obcaecati placeat ab distinctio unde ipsam molestias atqueratione delectus blanditiis nemo eius dignissimos doloremque quaealiquid maiores id tempore consequatur, quod pariatur saepe.',
@@ -50,7 +56,9 @@ export const ClubData = [
     email: 'club3@mail.com'
   },{
     id: 4,
-    type: 'Club',
+    recruitingFromYear: '1',
+    dept: 'IT',
+    type: 'Association',
     name: 'Club 4',
     description:
       'Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet, illoat. Repudiandae ratione impedit delectus consectetur. Aspernaturvero obcaecati placeat ab distinctio unde ipsam molestias atqueratione delectus blanditiis nemo eius dignissimos doloremque quaealiquid maiores id tempore consequatur, quod pariatur saepe.',
@@ -61,6 +69,8 @@ export const ClubData = [
     email: 'club4@mail.com'
   },{
     id: 5,
+    recruitingFromYear: '2',
+    dept: 'EEE',
     type: 'Club',
     name: 'Club 1',
     description:
@@ -72,7 +82,9 @@ export const ClubData = [
     email: 'club5@mail.com'
   },{
     id: 6,
-    type: 'Club',
+    recruitingFromYear: '1',
+    dept: 'Unaffiliated',
+    type: 'Association',
     name: 'Club 6',
     description:
       'Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet, illoat. Repudiandae ratione impedit delectus consectetur. Aspernaturvero obcaecati placeat ab distinctio unde ipsam molestias atqueratione delectus blanditiis nemo eius dignissimos doloremque quaealiquid maiores id tempore consequatur, quod pariatur saepe.',

@@ -3,6 +3,9 @@ import React from "react";
 // import link
 import {Link} from 'react-router-dom'
 
+// import logo
+import Logo from '../assets/img/logo.svg'
+
 const Header = () => {
     return( 
     <header className="py-6 mb-12 border-b">
@@ -11,7 +14,7 @@ const Header = () => {
             {/* LOGO */}
 
             <Link>
-                <div className="logo">LOGO</div>
+                <img src={Logo} className="w-24"/>
             </Link>
 
             {/* Buttons */}
