@@ -10,8 +10,6 @@ import { ClubContext } from "./ClubContext";
 const TypeDrop = () => {
     const { type,setType,types } = useContext(ClubContext) 
 
-    console.log(type)
-
     const [isOpen, setIsOpen] = useState(false)
 
     return (

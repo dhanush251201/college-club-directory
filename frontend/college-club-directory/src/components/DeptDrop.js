@@ -10,8 +10,6 @@ import { ClubContext } from "./ClubContext";
 const DeptDrop = () => {
     const { dept,setDept,departments } = useContext(ClubContext) 
 
-    // console.log(dept)
-
     const [isOpen, setIsOpen] = useState(false)
 
     return (

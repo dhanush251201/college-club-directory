@@ -10,11 +10,11 @@ import {RiSearch2Line} from 'react-icons/ri'
 import { ClubContext } from "./ClubContext";
 
 const Search = () => {
-    const { clubs } = useContext(ClubContext)
+    const {handleClick } = useContext(ClubContext)
     // console.log(clubs)
 
     return (
-        <div className="px-[30px] py-6 max-w-[1170px] mx-auto flex flex-col lg:flex-row justify-between items-center gap-4 lg:gap-x-3 relative lg:-top-4 lg:shadow-1 bg-white lg:bg-transparent lg:backdrop-blur rounded-xl">
+        <div className="px-[30px] py-6 max-w-[1170px] mx-auto flex flex-col lg:flex-row justify-between items-center gap-4 lg:gap-x-3 relative lg:-top-4 lg:shadow-1 bg-white lg:bg-transparent lg:backdrop-blur rounded-xl" onClick={() => {handleClick()}}>
             <DeptDrop />
             <TypeDrop />
             <RecruitingFromDrop />

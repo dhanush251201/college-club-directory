@@ -10,8 +10,6 @@ import { ClubContext } from "./ClubContext";
 const RecruitingFromDrop = () => {
     const { recruitingYear,setRecruitingYear,recruitingYears } = useContext(ClubContext) 
 
-    console.log(recruitingYear)
-
     const [isOpen, setIsOpen] = useState(false)
 
     return (
