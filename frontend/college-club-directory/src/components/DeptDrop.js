@@ -21,7 +21,7 @@ const DeptDrop = () => {
                 <RiMapPinLine className="dropdown-icon-primary"/>
                 <div className="">
                     <div className="text-[15px] font-medium leading-tight">{dept}</div>
-                    <div className="text-[13px]">Select Club type</div>
+                    <div className="text-[13px]">Select Department</div>
                 </div>
 
                     {
