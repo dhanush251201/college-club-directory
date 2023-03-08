@@ -1,16 +1,16 @@
 import React from "react";
 
 // import components
-import Banner from '../components/Banner'
+import Banner from "../components/Banner";
 import ClubList from "../components/ClubList";
 
 const Home = () => {
-    return (
+  return (
     <div className="min-h-[1800px]">
-        <Banner />
-        <ClubList />
+      <Banner />
+      <ClubList />
     </div>
-    );
-}
+  );
+};
 
-export default Home; 
+export default Home;
