@@ -39,9 +39,9 @@ const ClubDetails = () => {
                     </div>
                     <p>{club.recruitingYear} onwards</p>
                     <p>Faculty incharge : {club.incharge}</p>
-                    <p>Student Secretary :{club.secretary}</p>
-                    <div className=" flex flex-row items-center">
-                        <p><RiMailLine/> {club.email}</p>
+                    <p>Student Secretary : {club.secretary}</p>
+                    <div className=" flex flex-row items-center w-fit">
+                        <div className="flex felx-row items-center justify-between max-w-xl"><RiMailLine/>  :  {club.email}</div>
                     </div>
                 </div>
             </div>
