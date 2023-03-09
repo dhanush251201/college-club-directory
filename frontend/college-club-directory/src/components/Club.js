@@ -13,14 +13,13 @@ const Club = ({ club }) => {
         className="mb-4 text-sm w-[310 px] rounded-t-lg rounded-tl-[50px] rounded-b-lg"
         alt="No"
       />
-      <div className="mb-8 flex gap-x-2">
+      <div className="flex gap-x-2">
         <div className="bg-green-500 rounded-full text-white px-3">{type}</div>
         <div className="bg-violet-500 rounded-full text-white px-3">{dept}</div>
       </div>
-      <div className="text-lg font-semibold max-w-[260px] mt-5 justify-center flex">
+      <div className="text-lg font-semibold mt-5 justify-center h-12">
         {name}
       </div>
-      <div className="max-w-[260px] mt-5">{description}</div>
       <div className="text-lg font-semibold text-violet-500 mb-4 mt-3">
         Recruiting from year : {recruitingYear}
       </div>

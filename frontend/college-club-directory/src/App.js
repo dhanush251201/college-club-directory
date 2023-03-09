@@ -12,6 +12,7 @@ import Footer from "./components/Footer";
 import Home from "./pages/Home";
 import ClubDetails from "./pages/ClubDetails";
 import Login from "./pages/Login";
+import Test from "./pages/Test";
 
 const App = () => {
   return (
@@ -21,6 +22,7 @@ const App = () => {
         <Route path="/" element={<Home />} />
         <Route path="/club/:id" element={<ClubDetails />} />
         <Route path="/login" element={<Login />} />
+        <Route path="/test" element={<Test />} />
       </Routes>
     </div>
   );
