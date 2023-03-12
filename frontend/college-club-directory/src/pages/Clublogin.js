@@ -10,15 +10,15 @@ const Banner = () => {
           <div>
             <img className="mx-auto h-12 w-auto" src={Logo} alt="CD Logo" />
             <h2 className="mt-6 text-center text-3xl font-bold tracking-tight text-gray-900">
-              Sign in to your account
+              Sign in to your Club Account
             </h2>
             <p class="mt-2 text-center text-sm text-gray-600">
               Or
               <a
-                href="/clublogin"
+                href="/login"
                 class="font-medium text-indigo-600 hover:text-indigo-500 pl-1"
               >
-                Sign in as Club Admin
+                Sign in as Student
               </a>
             </p>
           </div>
@@ -27,7 +27,7 @@ const Banner = () => {
             <div className="-space-y-px rounded-md shadow-sm">
               <div>
                 <label htmlFor="email-address" className="sr-only">
-                  Email address
+                  ClubId
                 </label>
                 <input
                   id="email-address"
@@ -36,7 +36,7 @@ const Banner = () => {
                   autoComplete="email"
                   required
                   className="relative block w-full rounded-t-md border-0 py-1.5 text-gray-900 ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:z-10 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
-                  placeholder="   Email address"
+                  placeholder="   Club Id"
                 />
               </div>
               <div>
@@ -54,7 +54,12 @@ const Banner = () => {
                 />
               </div>
             </div>
-
+            <div>
+              <label className=" text-xs">
+                If your club is new, please contact administration to get your
+                club credentials
+              </label>
+            </div>
             <div className="flex items-center justify-between">
               <div className="flex items-center">
                 <input
@@ -70,7 +75,6 @@ const Banner = () => {
                   Remember me
                 </label>
               </div>
-
               <div className="text-sm">
                 <a
                   href="https://www.google.com"
@@ -82,7 +86,8 @@ const Banner = () => {
             </div>
 
             <div>
-              <button
+              <a
+                href="/clubupload"
                 type="submit"
                 className="group relative flex w-full justify-center rounded-md bg-violet-700 py-2 px-3 text-sm font-semibold text-white hover:bg-violet-800 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
               >
@@ -93,7 +98,7 @@ const Banner = () => {
                   />
                 </span>
                 Sign in
-              </button>
+              </a>
             </div>
           </form>
         </div>

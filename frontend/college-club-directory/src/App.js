@@ -12,6 +12,9 @@ import Footer from "./components/Footer";
 import Home from "./pages/Home";
 import ClubDetails from "./pages/ClubDetails";
 import Login from "./pages/Login";
+import Signup from "./pages/Signup";
+import Clublogin from "./pages/Clublogin";
+import ClubUpload from "./pages/ClubUpload";
 
 const App = () => {
   return (
@@ -21,6 +24,9 @@ const App = () => {
         <Route path="/" element={<Home />} />
         <Route path="/club/:id" element={<ClubDetails />} />
         <Route path="/login" element={<Login />} />
+        <Route path="/signup" element={<Signup />} />
+        <Route path="/clublogin" element={<Clublogin />} />
+        <Route path="/clubupload" element={<ClubUpload />} />
       </Routes>
     </div>
   );

@@ -12,7 +12,7 @@ const Header = () => {
       <div className="container mx-auto flex justify-between items-center">
         {/* LOGO */}
 
-        <Link>
+        <Link to="/">
           <img src={Logo} className="w-24" />
         </Link>
 
@@ -23,7 +23,7 @@ const Header = () => {
           </Link>
           <Link
             className="bg-violet-700 hover:bg-violet-800 text-white px-4 py-3 rounded-lg transition"
-            to="/"
+            to="/signup"
           >
             Sign up
           </Link>
