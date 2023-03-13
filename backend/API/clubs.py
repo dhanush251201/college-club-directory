@@ -24,3 +24,6 @@ def clubByDept(dept):
 def clubByrecYear(recYear):
     res = collection.find({"recruitingYear":recYear})
     return dumps(res)
+
+def registerClub(data):
+    pass

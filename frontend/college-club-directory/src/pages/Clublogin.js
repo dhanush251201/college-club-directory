@@ -1,8 +1,45 @@
-import React from "react";
+import React ,{useState} from "react";
 import { LockClosedIcon } from "@heroicons/react/20/solid";
+import { useNavigate } from "react-router-dom";
 import Logo from "../assets/img/logo.svg";
 
 const Banner = () => {
+  const [email, setEmail] = useState("");
+  const [password,setPassword] = useState("");
+  const navigate = useNavigate();
+  const handlePassword = (event) =>{
+    setPassword(event.target.value);
+  }
+
+  const handleEmail = (event) =>{
+    setEmail(event.target.value);
+  }
+
+  const handleClick = async(e) => {
+    e.preventDefault();
+    const response = await fetch('http://127.0.0.1:8000/login', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ "email":email, "password":password }),
+    }).then(res => res.json()).then(data => {
+      console.log(data)
+      if (data.status === 200){
+        localStorage.setItem('isLoggedIn',true)
+        console.log("logged In")
+        navigate("/")
+      }else{
+        console.log("Failed")
+      }
+      
+    }).catch(err=>console.log(err));
+    const data = await response.json();
+    if (data.status ===200) {
+      localStorage.setItem('isLoggedIn',true)
+      console.log("LoggedIn")
+    } else {
+      console.log("Error Logging In")
+    }
+  } 
   return (
     <div className="container mx-auto min-h-screen">
       <div className="flex min-h-full items-center justify-center py-12 px-4 sm:px-6 lg:px-8">
@@ -22,12 +59,12 @@ const Banner = () => {
               </a>
             </p>
           </div>
-          <form className="mt-8 space-y-6" action="#" method="POST">
+          <form className="mt-8 space-y-6">
             <input type="hidden" name="remember" defaultValue="true" />
             <div className="-space-y-px rounded-md shadow-sm">
               <div>
                 <label htmlFor="email-address" className="sr-only">
-                  ClubId
+                  Email
                 </label>
                 <input
                   id="email-address"
@@ -35,6 +72,8 @@ const Banner = () => {
                   type="email"
                   autoComplete="email"
                   required
+                  onChange={handleEmail}
+                  value={email}
                   className="relative block w-full rounded-t-md border-0 py-1.5 text-gray-900 ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:z-10 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
                   placeholder="   Club Id"
                 />
@@ -47,6 +86,8 @@ const Banner = () => {
                   id="password"
                   name="password"
                   type="password"
+                  value={password}
+                  onChange={handlePassword}
                   autoComplete="current-password"
                   required
                   className="relative block w-full rounded-b-md border-0 py-1.5 text-gray-900 ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:z-10 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
@@ -89,6 +130,7 @@ const Banner = () => {
               <a
                 href="/clubupload"
                 type="submit"
+                onClick={handleClick}
                 className="group relative flex w-full justify-center rounded-md bg-violet-700 py-2 px-3 text-sm font-semibold text-white hover:bg-violet-800 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
               >
                 <span className="absolute inset-y-0 left-0 flex items-center pl-3">

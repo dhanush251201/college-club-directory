@@ -11,10 +11,11 @@ const Banner = () => {
             Explore clubs at PSG
           </h1>
           <p className="max-w-[480px] mb-8">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima
-            repellendus quo cupiditate, veniam esse eius provident, accusamus
-            sed nemo ea saepe officia qui! Labore nisi necessitatibus ipsum
-            impedit ex sed.
+            Club directory for PSG College of Technology.
+            Find the club best suited for your interests.
+            Learn and improve yourselves in a holistic environment.
+            A wide variety fo technical and non technical clubs are present.
+            Regular events and anctivites are acarried out by all the clubs so watch out for your favourite club's activities.
           </p>
         </div>
         <div className="hidden lg:flex flex-1 container mx-auto xl:mr-[110px]">

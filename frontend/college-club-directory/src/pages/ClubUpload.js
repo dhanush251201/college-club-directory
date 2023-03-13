@@ -1,18 +1,55 @@
-/*
-  This example requires some changes to your config:
-  
-  ```
-  // tailwind.config.js
-  module.exports = {
-    // ...
-    plugins: [
-      // ...
-      require('@tailwindcss/forms'),
-    ],
+import React, { useState } from "react";
+export default function ClubUpload() {
+
+  const [name,setName] = useState("")
+  const [dept,setDept] = useState("Unaffiliated")
+  const [id,setId] = useState("")
+  const [structure,setStructure] = useState("Club")
+  const [slogan,setSlogan] = useState("")
+  const [recYear,setRecYear] = useState(1)
+  const [advisor,setAdvisor] = useState("")
+  const [secretary,setSecretary] = useState("")
+  const [website,setWebsite] = useState("")
+  const [whatsapp,setWhatsapp] = useState("")
+  const [desc,setDesc] = useState("")
+
+  const handleName = (e) => {
+    setName(e.target.value);
   }
-  ```
-*/
-export default function Example() {
+  const handleDept = (e) => {
+    setDept(e.target.value);
+  }
+  const handleId = (e) => {
+    setId(e.target.value);
+  }
+  const handleStructure = (e) => {
+    setStructure(e.target.value);
+  }
+  const handleSlogan = (e) => {
+    setSlogan(e.target.value);
+  }
+  const handleRecYear = (e) => {
+    setRecYear(e.target.value);
+  }
+  const handleAdvisor = (e) => {
+    setAdvisor(e.target.value);
+  }
+  const handleSecretary = (e) => {
+    setSecretary(e.target.value);
+  }
+  const handleWebsite = (e) => {
+    setWebsite(e.target.value);
+  }
+  const handleWhatsapp = (e) => {
+    setWhatsapp(e.target.value);
+  }
+  const handleDesc = (e) => {
+    setDesc(e.target.value);
+  }
+  const handleClick = (e) => {
+    console.log(name,dept,id,structure,slogan,recYear,advisor,secretary,website,whatsapp,desc)
+  }
+
   return (
     <div className="container mx-auto min-h-screen">
       <div className="mt-10 sm:mt-0">
@@ -28,7 +65,7 @@ export default function Example() {
             </div>
           </div>
           <div className="mt-5 md:col-span-2 md:mt-0">
-            <form action="#" method="POST">
+            <form>
               <div className="overflow-hidden shadow sm:rounded-md">
                 <div className="bg-white px-4 py-5 sm:p-6">
                   <div className="grid grid-cols-6 gap-6">
@@ -45,6 +82,8 @@ export default function Example() {
                         id="first-name"
                         autoComplete="given-name"
                         className="mt-2 block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-violet-600 sm:text-sm sm:leading-6"
+                        value={name}
+                        onChange={handleName}
                       />
                     </div>
 
@@ -61,6 +100,8 @@ export default function Example() {
                         id="department"
                         autoComplete="family-name"
                         className="mt-2 block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-violet-600 sm:text-sm sm:leading-6"
+                        onChange={handleDept}
+                        value={dept}
                       />
                     </div>
 
@@ -73,6 +114,8 @@ export default function Example() {
                       </label>
                       <input
                         type="text"
+                        value={id}
+                        onChange={handleId}
                         name="clubid"
                         id="clubid"
                         autoComplete="email"
@@ -88,6 +131,8 @@ export default function Example() {
                         Structure
                       </label>
                       <select
+                        value={structure}
+                        onChange={handleStructure}
                         id="structure"
                         name="structure"
                         autoComplete="structure-name"
@@ -107,6 +152,8 @@ export default function Example() {
                       </label>
                       <input
                         type="text"
+                        value={slogan}
+                        onChange={handleSlogan}
                         name="slogan"
                         id="slogan"
                         autoComplete="slogan"
@@ -123,6 +170,8 @@ export default function Example() {
                       </label>
                       <input
                         type="text"
+                        value={recYear}
+                        onChange={handleRecYear}
                         name="ryear"
                         id="ryear"
                         autoComplete="ryear"
@@ -139,6 +188,8 @@ export default function Example() {
                       </label>
                       <input
                         type="text"
+                        value={advisor}
+                        onChange={handleAdvisor}
                         name="faculty"
                         id="faculty"
                         autoComplete="address-level1"
@@ -155,6 +206,8 @@ export default function Example() {
                       </label>
                       <input
                         type="text"
+                        value={secretary}
+                        onChange={handleSecretary}
                         name="secretary"
                         id="secretary"
                         className="mt-2 block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-violet-600 sm:text-sm sm:leading-6"
@@ -195,7 +248,7 @@ export default function Example() {
             </div>
           </div>
           <div className="mt-5 md:col-span-2 md:mt-0">
-            <form action="#" method="POST">
+            <form>
               <div className="shadow sm:overflow-hidden sm:rounded-md">
                 <div className="space-y-6 bg-white px-4 py-5 sm:p-6">
                   <div className="grid grid-cols-3 gap-6">
@@ -214,8 +267,10 @@ export default function Example() {
                           type="text"
                           name="website"
                           id="website"
+                          value={website}
+                          onChange={handleWebsite}
                           className="block w-full flex-1 rounded-none rounded-r-md border-0 py-1.5 text-gray-900 ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-violet-600 sm:text-sm sm:leading-6"
-                          placeholder="  www.example.com"
+                          placeholder="  www.ClubUpload.com"
                         />
                       </div>
                     </div>
@@ -237,6 +292,8 @@ export default function Example() {
                           type="text"
                           name="whatsapp"
                           id="whatsapp"
+                          value={whatsapp}
+                          onChange={handleWhatsapp}
                           className="block w-full flex-1 rounded-none rounded-r-md border-0 py-1.5 text-gray-900 ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-violet-600 sm:text-sm sm:leading-6"
                           placeholder="  Whatsapp Number"
                         />
@@ -258,7 +315,8 @@ export default function Example() {
                         rows={7}
                         className="mt-1 block w-full rounded-md border-0 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-violet-600 sm:py-1.5 sm:text-sm sm:leading-6"
                         placeholder="  Describe your club in detail."
-                        defaultValue={""}
+                        value={desc}
+                        onChange={handleDesc}
                       />
                     </div>
                     <p className="mt-2 text-sm text-gray-500">
@@ -334,6 +392,7 @@ export default function Example() {
                 <div className="bg-gray-50 px-4 py-3 text-right sm:px-6">
                   <button
                     type="submit"
+                    onClick={handleClick}
                     className="inline-flex justify-center rounded-md bg-violet-600 py-2 px-3 text-sm font-semibold text-white shadow-sm hover:bg-violet-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-violet-500"
                   >
                     Save

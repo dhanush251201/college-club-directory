@@ -60,7 +60,7 @@ export const ClubData = [
     id: 4,
     recruitingYear: "1",
     dept: "Unaffiliated",
-    type: "Association",
+    type: "Club",
     name: "Tek Music",
     description:
       "Tek Music is the official music club of PSG College of Technology. Our club has been providing melodious tunes and rhythms to several generations of Techians since 1952. We conduct a variety of shows throughout the academic year ranging from Indian classical music to contemporary Western styles. Apart from the numerous shows on campus, we also take our talent to many inter-college band competitions.",
@@ -172,7 +172,7 @@ export const ClubData = [
     id: 5,
     recruitingYear: "2",
     dept: "Physics",
-    type: "Club",
+    type: "Association",
     name: "Sir C.V. Raman Physics Association",
     description:
       "Sir C.V. Raman Physics Association has been one of the renowned and active associations of PSG College of Technology. It provides the students a platform to explore various disciples of physics in depth. The association organizes a wide range of events that quench the knowledge thirst of physics enthusiasts. The events organized range from quizzes, puzzles to webinars and guest lectures which help students to get an insight into the past, present and future of Physics!",
