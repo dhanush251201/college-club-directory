@@ -1,6 +1,6 @@
 from pymongo import MongoClient
 from pydantic import BaseModel
- 
+import json
 client = MongoClient("mongodb://localhost:27017")
 
 db = client.ADL
@@ -37,4 +37,10 @@ tmp = {"id":1,
         "email":'club1@mail.com'
 }
 
-addClub(tmp)
+# addClub(tmp)
+
+with open('val.json','r') as obj:
+    res = json.load(obj)
+print(res)
+for i in res:
+    addClub(i)
