@@ -1,8 +1,52 @@
-import React from "react";
-import { LockClosedIcon } from "@heroicons/react/20/solid";
-import Logo from "../assets/img/logo.svg";
+import React, { useState } from "react";
 
 const Banner = () => {
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+  const [name, setName] = useState("");
+  const [rollno, setRollno] = useState("");
+  // const navigate = useNavigate();
+  const handlePassword = (event) => {
+    setPassword(event.target.value);
+  };
+
+  const handleEmail = (event) => {
+    setEmail(event.target.value);
+  };
+  const handleName = (event) => {
+    setName(event.target.value);
+  };
+
+  const handleRollno = (event) => {
+    setRollno(event.target.value);
+  };
+  const handleClick = async (e) => {
+    e.preventDefault();
+    const response = await fetch("http://localhost:3101/api/users/signup", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({
+        email: email,
+        password: password,
+        name: name,
+        roll: rollno,
+        clubId: "",
+      }),
+    })
+      .then((res) => res.json())
+      .then((data) => {
+        console.log(data);
+        if (data.status === 201) {
+          alert(data.message);
+          window.location.href = "/login";
+        } else {
+          alert(data.message);
+        }
+      })
+      .catch((err) => console.log(err));
+    console.log(response);
+  };
+
   return (
     <div className="container mx-auto min-h-screen">
       <div class="flex items-center justify-center min-h-screen bg-gray-100">
@@ -36,6 +80,8 @@ const Banner = () => {
                   type="text"
                   placeholder="Name"
                   class="w-full px-4 py-2 mt-2 border rounded-md focus:outline-none focus:ring-1 focus:ring-violet-600"
+                  value={name}
+                  onChange={handleName}
                 />
               </div>
               <div class="mt-4">
@@ -46,6 +92,8 @@ const Banner = () => {
                   type="text"
                   placeholder="Email"
                   class="w-full px-4 py-2 mt-2 border rounded-md focus:outline-none focus:ring-1 focus:ring-violet-600"
+                  value={email}
+                  onChange={handleEmail}
                 />
               </div>
               <div class="mt-4">
@@ -56,6 +104,8 @@ const Banner = () => {
                   type="text"
                   placeholder="Roll No"
                   class="w-full px-4 py-2 mt-2 border rounded-md focus:outline-none focus:ring-1 focus:ring-violet-600"
+                  value={rollno}
+                  onChange={handleRollno}
                 />
               </div>
               <div class="mt-4">
@@ -72,11 +122,17 @@ const Banner = () => {
                   type="password"
                   placeholder="Password"
                   class="w-full px-4 py-2 mt-2 border rounded-md focus:outline-none focus:ring-1 focus:ring-violet-600"
+                  value={password}
+                  onChange={handlePassword}
                 />
               </div>
               <span class="text-xs text-red-400">Password must be same!</span>
               <div class="flex">
-                <button class="w-full px-6 py-2 mt-4 text-white bg-violet-600 rounded-lg hover:bg-violet-900">
+                <button
+                  type="submit"
+                  onClick={handleClick}
+                  class="w-full px-6 py-2 mt-4 text-white bg-violet-600 rounded-lg hover:bg-violet-900"
+                >
                   Create Account
                 </button>
               </div>

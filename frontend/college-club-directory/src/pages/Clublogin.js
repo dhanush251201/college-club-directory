@@ -31,7 +31,7 @@ const Banner = () => {
           console.log("logged In");
           navigate("/clubupload");
         } else {
-          console.log("Failed");
+          alert(data.message);
         }
         console.log(response);
       })
